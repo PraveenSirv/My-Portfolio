@@ -1,54 +1,111 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .tech-stack .badge {
+            margin: 2px;
+            font-size: 0.8rem;
+        }
+    </style>
 </head>
-    <body>
-    <div th:fragment="projects">
-        <!-- Projects Section-->
-        <section class="py-5" >
-            <div class="container px-5 mb-5">
-                <div class="text-center mb-5">
-                    <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Projects</span></h1>
-                </div>
-                <div class="row gx-5 justify-content-center">
-                    <div class="col-lg-11 col-xl-9 col-xxl-8">
-                        <!-- Project Card 1-->
-                        <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
-                            <div class="card-body p-0">
-                                <div class="d-flex align-items-center">
-                                    <div class="p-5">
-                                        <h2 class="fw-bolder">Project Name 1</h2>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius at enim eum illum aperiam placeat esse? Mollitia omnis minima saepe recusandae libero, iste ad asperiores! Explicabo commodi quo itaque! Ipsam!</p>
+<body>
+<div th:fragment="projects">
+    <!-- Projects Section-->
+    <section class="py-5">
+        <div class="container px-5 mb-5">
+            <div class="text-center mb-5">
+                <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">Projects</span></h1>
+            </div>
+            <div class="row gx-5 justify-content-center">
+                <div class="col-lg-12 col-xl-11 col-xxl-10">
+
+                    <!-- Project Card 1 (text left, image right)-->
+                    <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                        <div class="card-body p-0">
+                            <div class="row align-items-center g-0">
+                                <div class="col-md-6 p-5">
+                                    <h2 class="fw-bolder">Personal Portfolio Website</h2>
+                                    <p>
+                                        A full-stack personal portfolio built with <strong>Spring Boot</strong>
+                                        to showcase my skills, projects, and experience.
+                                        It features a responsive design, a <strong>contact form</strong>
+                                        that sends emails directly to me using <strong>SMTP</strong>,
+                                        and deployment on <strong>Railway</strong>.
+                                    </p>
+                                    <p><strong>Tech Stack:</strong></p>
+                                    <div class="tech-stack">
+                                        <span class="badge bg-primary">Java</span>
+                                        <span class="badge bg-success">Spring Boot</span>
+                                        <span class="badge bg-info text-dark">Spring MVC</span>
+                                        <span class="badge bg-warning text-dark">Hibernate</span>
+                                        <span class="badge bg-danger">MySQL</span>
+                                        <span class="badge bg-secondary">Railway</span>
+                                        <span class="badge bg-dark">HTML</span>
+                                        <span class="badge bg-dark">CSS</span>
+                                        <span class="badge bg-dark">JavaScript</span>
                                     </div>
-                                    <img class="img-fluid" src="https://dummyimage.com/300x400/343a40/6c757d" alt="..." />
+                                    <br>
+                                    <a href="https://my-portfolio-production-0ca9.up.railway.app/" class="btn btn-primary btn-sm" target="_blank">🔗 Live Demo</a>
+                                    <a href="https://github.com/PraveenSirv/My-Portfolio.git" class="btn btn-outline-dark btn-sm" target="_blank">💻 GitHub</a>
                                 </div>
-                            </div>
-                        </div>
-                        <!-- Project Card 2-->
-                        <div class="card overflow-hidden shadow rounded-4 border-0">
-                            <div class="card-body p-0">
-                                <div class="d-flex align-items-center">
-                                    <div class="p-5">
-                                        <h2 class="fw-bolder">Project Name 2</h2>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius at enim eum illum aperiam placeat esse? Mollitia omnis minima saepe recusandae libero, iste ad asperiores! Explicabo commodi quo itaque! Ipsam!</p>
-                                    </div>
-                                    <img class="img-fluid" src="https://dummyimage.com/300x400/343a40/6c757d" alt="..." />
+                                <div class="col-md-5">
+                                    <img class="img-fluid " src="assets/images/portfolio_ss.png" alt="Portfolio Screenshot" />
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Project Card 2 (image left, text right)-->
+                    <div class="card overflow-hidden shadow rounded-4 border-0">
+                        <div class="card-body p-0">
+                            <div class="row align-items-center g-0 flex-md-row-reverse">
+                                <div class="col-md-6 p-5">
+                                    <h2 class="fw-bolder">RoyalMedico (In Progress)</h2>
+                                    <p>
+                                        A microservices-based medical management platform built with
+                                        <strong>Spring Boot</strong>, <strong>Hibernate</strong>, and <strong>MySQL</strong>.
+                                        It’s modularized into <em>Customer, Prescription, Admin, and Billing Services</em> for scalability and clean separation.
+                                    </p>
+                                    <p><strong>Key Features:</strong></p>
+                                    <ul>
+                                        <li>REST APIs for service-to-service communication</li>
+                                        <li>Centralized Exception Handling & DTOs</li>
+                                        <li>Future enhancements: Spring Security & Deployment</li>
+                                    </ul>
+                                    <div class="tech-stack">
+                                        <span class="badge bg-primary">Java</span>
+                                        <span class="badge bg-success">Spring Boot</span>
+                                        <span class="badge bg-warning text-dark">Hibernate</span>
+                                        <span class="badge bg-danger">MySQL</span>
+                                        <span class="badge bg-secondary">Microservices</span>
+                                    </div>
+                                    <br>
+                                    <a class="btn btn-primary btn-sm" href="https://github.com/PraveenSirv/RoyalMedico.git" target="_blank">
+                                        💻 View on GitHub
+                                    </a>
+                                </div>
+                                <div class="col-md-5">
+                                    <img class="img-fluid project-img" src="assets/images/Royal_ss.png" alt="RoyalMedico Screenshot" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-        </section>
-        <!-- Call to action section-->
-        <section class="py-5 bg-gradient-primary-to-secondary text-white">
-            <div class="container px-5 my-5">
-                <div class="text-center">
-                    <h2 class="display-4 fw-bolder mb-4">Let's build something together</h2>
-                    <a class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder" th:href="@{/contact}">Contact me</a>
-                </div>
+        </div>
+    </section>
+
+    <!-- Call to action section-->
+    <section class="py-5 bg-gradient-primary-to-secondary text-white">
+        <div class="container px-5 my-5">
+            <div class="text-center">
+                <h2 class="display-4 fw-bolder mb-4">Let's build something together</h2>
+                <a class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder" th:href="@{/contact}">Contact me</a>
             </div>
-        </section>
-    </div>
-    </body>
+        </div>
+    </section>
+</div>
+</body>
 </html>
